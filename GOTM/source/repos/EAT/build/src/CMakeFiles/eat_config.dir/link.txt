@@ -1,0 +1,2 @@
+/usr/bin/ar qc libeat_config.a  CMakeFiles/eat_config.dir/eat_config.F90.o
+/usr/bin/ranlib libeat_config.a

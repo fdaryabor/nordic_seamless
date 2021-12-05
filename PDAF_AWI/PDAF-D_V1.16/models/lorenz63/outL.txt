@@ -1,0 +1,41 @@
+
+                +++++ PDAF test suite +++++
+
+                  Run only model forecast
+
+                     Running on 1 PE
+
+
+
+ INITIALIZE MODEL
+                      MODEL: Lorenz 63
+   Initial state
+                         x0: -0.58727600
+                         y0: -0.56367800
+                         z0: 16.87080000
+   Model parameters:
+                      Gamma: 10.00000000
+                          rh 28.00000000
+                       beta:  2.66666667
+                 Time steps:     20  (final step:     20)
+             Time step size:      0.0050
+
+ Initialize NetCDF output
+
+ PDAF test suite: START INTEGRATION
+ model PE exited: mype            0
+
+ PDAF test suite: EXITED INTEGRATIONS
+
+                  Model - Memory overview
+          ---------------------------------------------
+                     Allocated memory  (MB)
+              Model field:   0.00002 MB (persistent)
+
+                 Model - Timing information
+          ---------------------------------------------
+                   initialize model:      0.004 s
+                        integration:      0.000 s
+                   total run time:      0.004 s
+
+ PDAF test suite: END

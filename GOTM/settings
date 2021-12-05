@@ -1,0 +1,4 @@
+setenv CC mpiicc
+setenv CXX mpiicpc
+setenv FC mpiifort
+setenv MPI_Fortran_INCLUDE_PATH /global/AWIsoft/intel/2018/impi/2018.4.274/intel64/include

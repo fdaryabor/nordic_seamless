@@ -1,0 +1,330 @@
+ ------------------------------------------------------------------------
+ GOTM started on 2021/06/06 at 22:21:28
+ ------------------------------------------------------------------------
+    initialize_gotm
+ ------------------------------------------------------------------------
+        Reading configuration from: gotm.yaml
+        configuring modules ....
+    init_airsea_yaml
+        done
+    init_observations_yaml
+    init_stokes_drift_yaml
+        done
+    init_turbulence_yaml
+        done.
+    init_gotm_fabm_yaml
+        done.
+    init_meanflow_yaml
+        done
+    init_eqstate_yaml
+        done.
+ Initializing ergom...
+    model type: gotm/ergom
+    initialization succeeded.
+ ERROR: the following setting(s) were not recognized:
+ - /mimic_3d/int_press
+ Continuing because --ignore_unknown_config is specified.
+        Arkona Basin simulation
+        Using           71  layers to resolve a depth of   46.0000000000000     
+        The station Arkona station is situated at (lat,long) 
+   54.8830000000000        13.8670000000000     
+        Arkona station
+        initializing modules....
+    init_input
+        done
+    init_time
+        Time step:         1800.00000000000       seconds
+        Time format:               2
+        Start:          2010-01-01 00:00:00
+        Stop:           2020-12-31 18:00:00
+         ==>         4017  day(s) and                  64800  seconds ==> 
+                192852  micro time steps
+    post_init_meanflow
+        allocation meanflow memory..
+        done.
+    init_tridiagonal
+        external specified sigma coordinates
+    post_init_observations
+        allocation observation memory..
+        
+ Reading salinity                                                               
+                                                           from:
+            sprof.dat
+        
+ Reading temperature                                                            
+                                                           from:
+            tprof.dat
+        
+ Reading mimic_3d/ext_pressure/h                                                
+                                                           from:
+            ext_press.dat
+        
+ Reading mimic_3d/ext_pressure/dpdx                                             
+                                                           from:
+            ext_press.dat
+        
+ Reading mimic_3d/ext_pressure/dpdy                                             
+                                                           from:
+            ext_press.dat
+        
+ Using constant mimic_3d/w/height                                               
+                                                                 = 
+  0.000000000000000E+000
+        
+ Using constant mimic_3d/zeta                                                   
+                                                                 = 
+  0.000000000000000E+000
+        
+ Using constant waves/Hs                                                        
+                                                                 = 
+  0.000000000000000E+000
+        
+ Using constant waves/Tz                                                        
+                                                                 = 
+  0.000000000000000E+000
+        
+ Using constant waves/phiw                                                      
+                                                                 = 
+  0.000000000000000E+000
+        done.
+    post_init_stokes_drift
+        allocation stokes_drift memory..
+        Stokes drift off.
+        done.
+    post_init_turbulence
+        allocation turbulence memory..
+        done.
+         
+        --------------------------------------------------------
+        You are using the k-epsilon model
+        with the following properties:
+         
+            ce1                                  =   1.44000000000000     
+            ce2                                  =   1.92000000000000     
+            ce3minus                             = -0.620912126249001     
+            ce3plus                              =   1.00000000000000     
+            sig_k                                =   1.00000000000000     
+            sig_e                                =   1.20265265449834     
+         
+            Value of the stability function
+            in the log-law,                   cm0 =  0.526464710835324     
+            in shear-free turbulence,        cmsf =  0.731006013490010     
+         
+            von Karman constant,           kappa =  0.400000000000000     
+            homogeneous decay rate,            d =  -1.08695652173913     
+            spatial decay rate (no shear), alpha =  -7.82461519721493     
+            length-scale slope (no shear),     L =  4.662134571526204E-002
+            steady-state Richardson-number, Ri_st=  0.250000000000000     
+        --------------------------------------------------------
+         
+    post_init_airsea
+        Calculating swr=swr(t(lon),lat,cloud)
+        Albedo method:            1
+        
+ Reading surface/u10                                                            
+                                                           from:
+            meteo.dat
+        
+ Reading surface/v10                                                            
+                                                           from:
+            meteo.dat
+        
+ Reading surface/airp                                                           
+                                                           from:
+            meteo.dat
+            applying scale factor =    100.000000000000     
+        
+ Reading surface/airt                                                           
+                                                           from:
+            meteo.dat
+        
+ Reading surface/hum                                                            
+                                                           from:
+            meteo.dat
+        
+ Reading surface/cloud                                                          
+                                                           from:
+            meteo.dat
+        Air-sea exchanges will be calculated
+            heat- and momentum-fluxes:
+                using Fairall et. all formulation
+            net longwave radiation:
+                using Clark formulation
+        
+ Reading surface/precip                                                         
+                                                           from:
+            precip.dat
+        rain_impact=       T
+        calc_evaporation=  T
+        
+ Using constant surface/sst                                                     
+                                                                 = 
+  0.000000000000000E+000
+        
+ Using constant surface/sss                                                     
+                                                                 = 
+  0.000000000000000E+000
+        done
+    register_all_variables()
+        register_coordinate_variables()
+        register_meanflow_variables()
+        register_airsea_variables()
+        register_observation_variables()
+        register_stokes_drift_variables()
+        register_turbulence_variables()
+        register_diagnostic_variables()
+    post_init_gotm_fabm
+        FABM pelagic state variables:
+            ergom_dia  mmol N/m3  ergom diatoms
+            ergom_fla  mmol N/m3  ergom flagellates
+            ergom_cya  mmol N/m3  ergom cyanobacteria
+            ergom_zoo  mmol N/m3  ergom zooplankton
+            ergom_det  mmol N/m3  ergom detritus
+            ergom_amm  mmol N/m3  ergom ammonium
+            ergom_nit  mmol N/m3  ergom nitrate
+            ergom_pho  mmol P/m3  ergom phosphate
+            ergom_oxy  mmol O2/m3  ergom oxygen
+        FABM bottom-bound state variables:
+            ergom_flf  mmol N/m2  ergom fluff
+        FABM surface-bound state variables:
+        FABM diagnostic variables defined on the full model domain:
+            ergom_dia_sms  mmol N/m3/s  ergom diatoms sources-sinks
+            ergom_dia_w  m/s  ergom diatoms vertical velocity
+            ergom_fla_sms  mmol N/m3/s  ergom flagellates sources-sinks
+            ergom_fla_w  m/s  ergom flagellates vertical velocity
+            ergom_cya_sms  mmol N/m3/s  ergom cyanobacteria sources-sinks
+            ergom_cya_w  m/s  ergom cyanobacteria vertical velocity
+            ergom_zoo_sms  mmol N/m3/s  ergom zooplankton sources-sinks
+            ergom_zoo_w  m/s  ergom zooplankton vertical velocity
+            ergom_det_sms  mmol N/m3/s  ergom detritus sources-sinks
+            ergom_det_w  m/s  ergom detritus vertical velocity
+            ergom_amm_sms  mmol N/m3/s  ergom ammonium sources-sinks
+            ergom_amm_w  m/s  ergom ammonium vertical velocity
+            ergom_nit_sms  mmol N/m3/s  ergom nitrate sources-sinks
+            ergom_nit_w  m/s  ergom nitrate vertical velocity
+            ergom_pho_sms  mmol P/m3/s  ergom phosphate sources-sinks
+            ergom_pho_w  m/s  ergom phosphate vertical velocity
+            ergom_oxy_sms  mmol O2/m3/s  ergom oxygen sources-sinks
+            ergom_oxy_w  m/s  ergom oxygen vertical velocity
+            ergom_PAR  W/m2  ergom photosynthetically active radiation
+            ergom_GPP  mmol/m3  ergom gross primary production
+            ergom_NCP  mmol/m3  ergom net community production
+            ergom_PPR  mmol/m3/d  ergom gross primary production rate
+            ergom_NPR  mmol/m3/d  ergom net community production rate
+            ergom__constant_1  m-1  
+ ergom attenuation_coefficient_of_photosynthetic_radiative_flux
+            ergom__attenuation_coefficient_of_photosynthetic_radiative_flux  m-1
+   ergom light extinction contribution computed by get_light_extinction
+            zero    zero
+            
+ attenuation_coefficient_of_photosynthetic_radiative_flux_calculator_result  m-1
+   attenuation_coefficient_of_photosynthetic_radiative_flux_calculator result
+            zero_sms_tot    zero_sms_tot
+            zero_w_tot    zero_w_tot
+        
+ FABM diagnostic variables defined on a horizontal slice of the model domain:
+            ergom_dia_sfl  mmol N/m3*m/s  ergom diatoms surface flux
+            ergom_dia_bfl  mmol N/m3*m/s  ergom diatoms bottom flux
+            ergom_fla_sfl  mmol N/m3*m/s  ergom flagellates surface flux
+            ergom_fla_bfl  mmol N/m3*m/s  ergom flagellates bottom flux
+            ergom_cya_sfl  mmol N/m3*m/s  ergom cyanobacteria surface flux
+            ergom_cya_bfl  mmol N/m3*m/s  ergom cyanobacteria bottom flux
+            ergom_zoo_sfl  mmol N/m3*m/s  ergom zooplankton surface flux
+            ergom_zoo_bfl  mmol N/m3*m/s  ergom zooplankton bottom flux
+            ergom_det_sfl  mmol N/m3*m/s  ergom detritus surface flux
+            ergom_det_bfl  mmol N/m3*m/s  ergom detritus bottom flux
+            ergom_amm_sfl  mmol N/m3*m/s  ergom ammonium surface flux
+            ergom_amm_bfl  mmol N/m3*m/s  ergom ammonium bottom flux
+            ergom_nit_sfl  mmol N/m3*m/s  ergom nitrate surface flux
+            ergom_nit_bfl  mmol N/m3*m/s  ergom nitrate bottom flux
+            ergom_pho_sfl  mmol P/m3*m/s  ergom phosphate surface flux
+            ergom_pho_bfl  mmol P/m3*m/s  ergom phosphate bottom flux
+            ergom_oxy_sfl  mmol O2/m3*m/s  ergom oxygen surface flux
+            ergom_oxy_bfl  mmol O2/m3*m/s  ergom oxygen bottom flux
+            ergom_flf_sms  mmol N/m2/s  ergom fluff sources-sinks
+            ergom__surface_albedo  -  
+ ergom albedo contribution computed by get_albedo
+            ergom__surface_drag_coefficient_in_air  -  
+ ergom surface drag contribution computed by get_drag
+            zero_hz    zero_hz
+            zero_sfl_tot    zero_sfl_tot
+            zero_bfl_tot    zero_bfl_tot
+            zero_hz_sms_tot    zero_hz_sms_tot
+        Using Eulerian solver
+        Using euler_forward()
+        done.
+        done.
+ ------------------------------------------------------------------------
+    saving initial conditions
+ Processing output category /state:
+   - temp
+   - salt
+   - u
+   - uo
+   - v
+   - vo
+   - u_taubo
+   - xP
+   - h
+   - ho
+   - num
+   - nuh
+   - nus
+   - tke
+   - tkeo
+   - eps
+   - ergom_dia
+   - ergom_fla
+   - ergom_cya
+   - ergom_zoo
+   - ergom_det
+   - ergom_amm
+   - ergom_nit
+   - ergom_pho
+   - ergom_oxy
+   - ergom_flf
+ ------------------------------------------------------------------------
+    integrate_gotm
+ ------------------------------------------------------------------------
+           0 %
+          10 %
+          20 %
+          30 %
+          40 %
+          50 %
+          60 %
+          70 %
+          80 %
+          90 %
+         100 %
+ ------------------------------------------------------------------------
+    finalize_gotm
+    clean_meanflow
+        de-allocation meanflow memory ...
+        done.
+    clean_turbulence
+        de-allocating turbulence memory ...
+        done.
+    clean_observations
+        de-allocate observation memory ...
+        done.
+    clean_tridiagonal
+    clean_gotm_fabm
+    Time spent on advection of FABM variables:   1.41873300000000     
+    Time spent on diffusion of FABM variables:   1.77248000000000     
+    Time spent on sink/source terms of FABM variables:   2.11429100000000     
+    done.
+ ------------------------------------------------------------------------
+ GOTM finished on 2021/06/06 at 22:21:43
+ ------------------------------------------------------------------------
+ CPU time:                       15.22711      seconds
+ Simulated time/CPU time:        22797074.3359214     
+ ------------------------------------------------------------------------
+ GOTM:    v6.0.0-21-g30c3a08 (master branch)
+ Config:             7
+ YAML:    0.1.0 (unknown branch)
+ flexout: 0.1.0 (unknown branch)
+ FABM:    v1.0.3-27-gab8a6ff (master~8 branch)
+ NetCDF:  4.5.0 of Jan 23 2018 12:14:31 $
+ ------------------------------------------------------------------------
+ Compiler: Intel 19.1.2.20200623

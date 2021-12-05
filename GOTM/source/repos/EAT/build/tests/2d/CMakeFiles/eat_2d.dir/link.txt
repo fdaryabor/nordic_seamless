@@ -1,0 +1,2 @@
+/usr/bin/ar qc libeat_2d.a  CMakeFiles/eat_2d.dir/eat_2d_data.F90.o
+/usr/bin/ranlib libeat_2d.a

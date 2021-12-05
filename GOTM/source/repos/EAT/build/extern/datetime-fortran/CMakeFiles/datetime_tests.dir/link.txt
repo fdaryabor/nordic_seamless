@@ -1,0 +1,1 @@
+/global/AWIsoft/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/ifort   -O3 CMakeFiles/datetime_tests.dir/tests/datetime_tests.f90.o  -o bin/datetime_tests lib/libdatetime.a 

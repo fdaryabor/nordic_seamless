@@ -1,0 +1,120 @@
+[  0%] Retrieving description of last GOTM commit...
+-- On branch master with commit id v6.0.0-21-g30c3a08
+[  0%] Built target version
+[  0%] Building Fortran object extern/flexout/extern/yaml/CMakeFiles/yaml.dir/yaml_types.F90.o
+[  0%] Building Fortran object extern/flexout/extern/yaml/CMakeFiles/yaml.dir/yaml.F90.o
+[  1%] Building Fortran object extern/flexout/extern/yaml/CMakeFiles/yaml.dir/yaml_settings.F90.o
+[  2%] Building Fortran object extern/flexout/extern/yaml/CMakeFiles/yaml.dir/yaml_version.F90.o
+[  3%] Linking Fortran static library libyaml.a
+[  3%] Built target yaml
+[  4%] Building Fortran object util/CMakeFiles/util.dir/compilation.F90.o
+[  4%] Building Fortran object util/CMakeFiles/util.dir/eqstate.F90.o
+[  4%] Building Fortran object util/CMakeFiles/util.dir/gotm_version.F90.o
+[  5%] Building Fortran object util/CMakeFiles/util.dir/time.F90.o
+[  5%] Building Fortran object util/CMakeFiles/util.dir/tridiagonal.F90.o
+[  6%] Building Fortran object util/CMakeFiles/util.dir/util.F90.o
+[  6%] Building Fortran object util/CMakeFiles/util.dir/adv_center.F90.o
+[  7%] Building Fortran object util/CMakeFiles/util.dir/convert_fluxes.F90.o
+[  7%] Building Fortran object util/CMakeFiles/util.dir/diff_center.F90.o
+[  8%] Building Fortran object util/CMakeFiles/util.dir/diff_face.F90.o
+[  9%] Building Fortran object util/CMakeFiles/util.dir/gridinterpol.F90.o
+[  9%] Building Fortran object util/CMakeFiles/util.dir/lagrange.F90.o
+[  9%] Building Fortran object util/CMakeFiles/util.dir/ode_solvers.F90.o
+[  9%] Linking Fortran static library libutil.a
+[  9%] Built target util
+[ 10%] Building Fortran object extern/flexout/src/CMakeFiles/field_manager.dir/field_manager.F90.o
+[ 10%] Linking Fortran static library libfield_manager.a
+[ 10%] Built target field_manager
+[ 10%] Building Fortran object extern/flexout/src/CMakeFiles/output_manager.dir/flexout_version.F90.o
+[ 10%] Building Fortran object extern/flexout/src/CMakeFiles/output_manager.dir/output_manager_core.F90.o
+[ 10%] Building Fortran object extern/flexout/src/CMakeFiles/output_manager.dir/formats/memory_output.F90.o
+[ 11%] Building Fortran object extern/flexout/src/CMakeFiles/output_manager.dir/formats/netcdf_output.F90.o
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(6): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [NETCDF]
+   use netcdf
+-------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(13): error #6592: This symbol must be a defined parameter, an enumerator, or an argument of an inquiry function that evaluates to a compile-time constant.   [NF90_FLOAT]
+   integer, save, public :: default_xtype = NF90_FLOAT
+--------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(13): error #6973: This is not a valid initialization expression.   [NF90_FLOAT]
+   integer, save, public :: default_xtype = NF90_FLOAT
+--------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(14): error #6592: This symbol must be a defined parameter, an enumerator, or an argument of an inquiry function that evaluates to a compile-time constant.   [NF90_FLOAT]
+   integer, save, public :: default_coordinate_xtype = NF90_FLOAT
+-------------------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(14): error #6973: This is not a valid initialization expression.   [NF90_FLOAT]
+   integer, save, public :: default_coordinate_xtype = NF90_FLOAT
+-------------------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(10): error #6404: This name does not have a type, and must have an explicit type.   [NF90_FLOAT]
+   public type_netcdf_file, NF90_FLOAT, NF90_DOUBLE
+----------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(10): error #6404: This name does not have a type, and must have an explicit type.   [NF90_DOUBLE]
+   public type_netcdf_file, NF90_FLOAT, NF90_DOUBLE
+----------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(100): error #6404: This name does not have a type, and must have an explicit type.   [NF90_CLOBBER]
+      iret = nf90_create(trim(self%path)//trim(self%postfix)//'.nc',NF90_CLOBBER,self%ncid); call check_err(iret)
+--------------------------------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(100): error #6404: This name does not have a type, and must have an explicit type.   [NF90_CREATE]
+      iret = nf90_create(trim(self%path)//trim(self%postfix)//'.nc',NF90_CLOBBER,self%ncid); call check_err(iret)
+-------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(104): error #6404: This name does not have a type, and must have an explicit type.   [NF90_GLOBAL]
+         iret = nf90_put_att(self%ncid,NF90_GLOBAL,'title',trim(self%title)); call check_err(iret)
+---------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(104): error #6404: This name does not have a type, and must have an explicit type.   [NF90_PUT_ATT]
+         iret = nf90_put_att(self%ncid,NF90_GLOBAL,'title',trim(self%title)); call check_err(iret)
+----------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(112): error #6404: This name does not have a type, and must have an explicit type.   [NF90_DEF_VAR]
+         iret = nf90_def_var(self%ncid,trim(dim%name),NF90_DOUBLE,(/get_dim_id(dim)/),self%time_id); call check_err(iret)
+----------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(182): error #6404: This name does not have a type, and must have an explicit type.   [NF90_ENDDEF]
+      iret = nf90_enddef(self%ncid); call check_err(iret)
+-------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(220): error #6404: This name does not have a type, and must have an explicit type.   [NF90_UNLIMITED]
+               length = NF90_UNLIMITED
+------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(224): error #6404: This name does not have a type, and must have an explicit type.   [NF90_DEF_DIM]
+            iret = nf90_def_dim(self%ncid, trim(dim%name), length, dim_id%netcdf_dimid); call check_err(iret)
+-------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(237): error #6601: In a CASE statement, the case-value must be a constant expression.   [NF90_FLOAT]
+      case (NF90_FLOAT)
+------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(237): error #6612: In a CASE statement, the case-value must be of type INTEGER, CHARACTER, or LOGICAL.   [NF90_FLOAT]
+      case (NF90_FLOAT)
+------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(237): error #6611: The case-value must be of the same type as the case-expr.   [NF90_FLOAT]
+      case (NF90_FLOAT)
+------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(238): error #6404: This name does not have a type, and must have an explicit type.   [NF90_FILL_FLOAT]
+         iret = nf90_put_att(ncid,varid,name,real(value,kind(NF90_FILL_FLOAT)))
+-------------------------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(238): error #6684: This is an incorrect value for a kind type parameter in this context.
+         iret = nf90_put_att(ncid,varid,name,real(value,kind(NF90_FILL_FLOAT)))
+--------------------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(238): error #6404: This name does not have a type, and must have an explicit type.   [NF90_PUT_ATT]
+         iret = nf90_put_att(ncid,varid,name,real(value,kind(NF90_FILL_FLOAT)))
+----------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(239): error #6601: In a CASE statement, the case-value must be a constant expression.   [NF90_DOUBLE]
+      case (NF90_DOUBLE)
+------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(239): error #6612: In a CASE statement, the case-value must be of type INTEGER, CHARACTER, or LOGICAL.   [NF90_DOUBLE]
+      case (NF90_DOUBLE)
+------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(239): error #6611: The case-value must be of the same type as the case-expr.   [NF90_DOUBLE]
+      case (NF90_DOUBLE)
+------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(240): error #6404: This name does not have a type, and must have an explicit type.   [NF90_FILL_DOUBLE]
+         iret = nf90_put_att(ncid,varid,name,real(value,kind(NF90_FILL_DOUBLE)))
+-------------------------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(240): error #6684: This is an incorrect value for a kind type parameter in this context.
+         iret = nf90_put_att(ncid,varid,name,real(value,kind(NF90_FILL_DOUBLE)))
+--------------------------------------------------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(268): error #6404: This name does not have a type, and must have an explicit type.   [NF90_PUT_VAR]
+         iret = nf90_put_var(self%ncid,self%time_id,time_value,(/self%itime/))
+----------------^
+/home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90(269): error #6404: This name does not have a type, and must have an explicit type.   [NF90_NOERR]
+         if (iret/=NF90_NOERR) call host%fatal_error('netcdf_output:save','error saving variable "time" to '//trim(self%path)//trim(self%postfix)//'.nc: '//nf90_strerror(iret))
+-------------------^
+/work/ollie/tmp/ifortnt36Jn.i90(335): catastrophic error: Too many errors, exiting
+compilation aborted for /home/ollie/fdaryabo/source/repos/GOTM/code/extern/flexout/src/formats/netcdf_output.F90 (code 1)
+make[2]: *** [extern/flexout/src/CMakeFiles/output_manager.dir/formats/netcdf_output.F90.o] Error 1
+make[1]: *** [extern/flexout/src/CMakeFiles/output_manager.dir/all] Error 2
+make: *** [all] Error 2

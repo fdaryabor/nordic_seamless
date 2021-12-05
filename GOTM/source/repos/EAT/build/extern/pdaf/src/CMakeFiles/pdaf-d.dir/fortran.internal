@@ -1,0 +1,11 @@
+# The fortran modules provided by this target.
+provides
+ pdaf_interfaces_module.mod
+ pdaf_memcounting.mod
+ pdaf_mod_filter.mod
+ pdaf_mod_filtermpi.mod
+ pdaf_timer.mod
+ pdafomi.mod
+ pdafomi_obs_f.mod
+ pdafomi_obs_l.mod
+ pdafomi_obs_op.mod
