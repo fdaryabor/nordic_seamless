@@ -1,0 +1,22 @@
+LICENSE
+
+This repository and its contents are part of the SEAMLESS project outputs for the CMEMS Arkona site in the Baltic Sea.
+
+All materials, including code, data, and documentation, are under copyright of the SEAMLESS Project (© 2021, https://seamlessproject.org).
+
+This work is licensed and protected under the SEAMLESS consortium rules. Redistribution, modification, or reuse of any part of this repository is not permitted without explicit written permission from the SEAMLESS consortium.
+
+For project information and deliverables, visit:  
+https://seamlessproject.org/Home.html
+
+Third-Party Components
+
+This repository includes or builds upon external software governed by their own licenses:
+
+- PDAF (Parallel Data Assimilation Framework)  
+  Licensed under the terms defined at: https://pdaf.awi.de/trac/wiki
+
+- GOTM (General Ocean Turbulence Model)  
+  Licensed under the terms defined at: https://gotm.net/portfolio/software/
+
+Please refer to their respective sites for license details and citation requirements.
